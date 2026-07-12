@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#030403" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Stone Oracle" />
+  <meta name="description" content="Touch the ancient stone and receive a short fortune." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preload" href="assets/oracle-sleeping.webp" as="image" type="image/webp" fetchpriority="high" />
+  <link rel="prefetch" href="assets/oracle-awake.webp" as="image" type="image/webp" />
+  <link rel="icon" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>The Stone Oracle</title>
+</head>
+<body>
+  <main class="oracle" id="app" data-state="idle" data-category="reflection" data-motion="full" data-ready="loading" data-performance="full">
+    <div class="loading-veil" id="loadingVeil" role="status" aria-live="polite">
+      <span class="loading-sigil" aria-hidden="true"></span>
+      <span>Waking the stone</span>
+    </div>
+
+    <div class="landscape-hint" aria-hidden="true">
+      <span class="rotate-device" aria-hidden="true"></span>
+      <p>Turn your device upright</p>
+    </div>
+
+    <div class="scene" aria-hidden="true">
+      <div class="scene-image scene-sleeping"></div>
+      <div class="scene-image scene-awake"></div>
+      <div class="scene-shadow"></div>
+
+      <div class="eye-aura eye-aura-left"></div>
+      <div class="eye-aura eye-aura-right"></div>
+      <div class="eye-core eye-core-left"></div>
+      <div class="eye-core eye-core-right"></div>
+
+      <div class="bowl-glow"></div>
+      <div class="mouth-reflection"></div>
+
+      <div class="mouth-smoke-system">
+        <span class="mouth-smoke mouth-smoke-1"></span>
+        <span class="mouth-smoke mouth-smoke-2"></span>
+        <span class="mouth-smoke mouth-smoke-3"></span>
+        <span class="mouth-smoke mouth-smoke-4"></span>
+        <span class="mouth-smoke mouth-smoke-5"></span>
+      </div>
+
+      <div class="inhale-stream inhale-stream-left"></div>
+      <div class="inhale-stream inhale-stream-right"></div>
+
+      <div class="nostril-glow nostril-glow-left"></div>
+      <div class="nostril-glow nostril-glow-right"></div>
+
+      <div class="nostril-smoke-system nostril-smoke-left">
+        <span class="nostril-plume plume-1"></span>
+        <span class="nostril-plume plume-2"></span>
+        <span class="nostril-plume plume-3"></span>
+        <span class="nostril-plume plume-4"></span>
+      </div>
+      <div class="nostril-smoke-system nostril-smoke-right">
+        <span class="nostril-plume plume-1"></span>
+        <span class="nostril-plume plume-2"></span>
+        <span class="nostril-plume plume-3"></span>
+        <span class="nostril-plume plume-4"></span>
+      </div>
+
+      <div class="dust dust-one"></div>
+      <div class="dust dust-two"></div>
+      <div class="dust dust-three"></div>
+    </div>
+
+    <nav class="utility" aria-label="Oracle controls">
+      <button class="utility-button" id="infoButton" type="button" aria-label="About this experience">i</button>
+      <button class="utility-button" id="soundButton" type="button" aria-label="Turn sound off" aria-pressed="true">
+        <span id="soundIcon" aria-hidden="true">♪</span>
+      </button>
+    </nav>
+
+    <button class="ritual-trigger" id="awakenButton" type="button" aria-label="Touch the stone to receive your fortune"></button>
+
+    <div class="invitation" id="invitation" aria-hidden="true">
+      <span class="invitation-mark"></span>
+      <p>Touch the stone</p>
+    </div>
+
+    <p class="omen-status" id="statusText" role="status" aria-live="assertive"></p>
+
+    <section class="fortune-dock" id="paperWindow" aria-hidden="true">
+      <article class="fortune-paper" id="fortunePaper" tabindex="-1" aria-label="Your fortune">
+        <div class="paper-frame" aria-hidden="true">
+          <span class="paper-corner paper-corner-nw"></span>
+          <span class="paper-corner paper-corner-ne"></span>
+          <span class="paper-corner paper-corner-sw"></span>
+          <span class="paper-corner paper-corner-se"></span>
+        </div>
+        <div class="paper-emblem" aria-hidden="true">
+          <span class="emblem-flourish emblem-flourish-left"></span>
+          <span class="emblem-medallion">✦</span>
+          <span class="emblem-flourish emblem-flourish-right"></span>
+        </div>
+        <p class="paper-kicker">The stone has spoken</p>
+        <blockquote id="fortuneText"></blockquote>
+        <div class="paper-rule" aria-hidden="true"><span></span></div>
+        <p class="paper-date" id="fortuneDate"></p>
+        <p class="paper-motto">Ogni pensiero vola</p>
+
+        <div class="result-actions" id="resultActions" aria-hidden="true" aria-label="Fortune actions">
+          <button class="result-action" id="saveButton" type="button">
+            <span class="action-icon" aria-hidden="true">↓</span>
+            <span>Save image</span>
+          </button>
+          <span class="action-divider" aria-hidden="true"></span>
+          <button class="result-action" id="shareButton" type="button">
+            <span class="action-icon" aria-hidden="true">↗</span>
+            <span>Share</span>
+          </button>
+        </div>
+        <button class="again-button" id="againButton" type="button">
+          <span aria-hidden="true">↺</span>
+          Touch the stone again
+        </button>
+      </article>
+    </section>
+
+    <dialog id="aboutDialog">
+      <button class="dialog-close" id="closeDialogButton" type="button" aria-label="Close">×</button>
+      <p class="dialog-kicker">The Stone Oracle</p>
+      <h1>One touch. One pronouncement.</h1>
+      <p>This is a digital fortune-machine prototype. Its messages are offered for amusement and reflection, not as factual predictions or professional advice.</p>
+      <div class="dialog-setting">
+        <div>
+          <strong>Motion</strong>
+          <span id="motionStatus">Stone movement, smoke and ceremonial transitions are enabled.</span>
+        </div>
+        <button id="motionButton" type="button" aria-pressed="false">Full</button>
+      </div>
+      <button class="dialog-return" id="dialogActionButton" type="button">Return to the stone</button>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <noscript>
+    <div class="noscript-message">The Stone Oracle requires JavaScript to awaken.</div>
+  </noscript>
+  <script src="app.js" defer></script>
+</body>
+</html>
