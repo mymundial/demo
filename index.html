@@ -15,7 +15,7 @@
   <link rel="prefetch" href="assets/oracle-awake.webp" as="image" type="image/webp" />
   <link rel="icon" href="assets/icon-192.png" />
   <link rel="apple-touch-icon" href="assets/icon-192.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles-v231.css" />
   <title>The Stone Oracle</title>
 </head>
 <body>
@@ -110,11 +110,6 @@
           <span class="paper-corner paper-corner-sw"></span>
           <span class="paper-corner paper-corner-se"></span>
         </div>
-        <div class="paper-emblem" aria-hidden="true">
-          <span class="emblem-flourish emblem-flourish-left"></span>
-          <span class="emblem-medallion">✦</span>
-          <span class="emblem-flourish emblem-flourish-right"></span>
-        </div>
         <p class="paper-kicker" id="paperKicker">The stone has spoken</p>
         <blockquote id="fortuneText"></blockquote>
         <div class="paper-rule" aria-hidden="true"><span></span></div>
@@ -158,6 +153,14 @@
   <noscript>
     <div class="noscript-message">The Stone Oracle requires JavaScript to awaken. / L'Oracolo di Pietra richiede JavaScript.</div>
   </noscript>
-  <script src="app.js" defer></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.getRegistrations().then(registrations => registrations.forEach(registration => registration.unregister()));
+    }
+    if ("caches" in window) {
+      caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith("stone-oracle-")).map(key => caches.delete(key))));
+    }
+  </script>
+  <script src="app-v231.js" defer></script>
 </body>
 </html>
