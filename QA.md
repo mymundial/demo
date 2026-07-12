@@ -1,27 +1,30 @@
-# Stone Oracle V2.2 Priority B — QA
+# Stone Oracle V2.3 bilingual QA
 
-## Automated checks
+## Automated checks completed
 
-- JavaScript syntax checked with `node --check`.
-- Full ritual executed in Chromium through an isolated test harness.
-- No browser console errors or uncaught page errors during the tested ritual.
-- Verified state order: `idle → awakening → gathering → inhaling → exhaling → revealing → revealed`.
-- Verified parchment remains hidden through gathering, inhale, and exhale.
-- Verified category colour is inherited by eyes, bowl, mouth smoke, nostril glow, and exhaled smoke.
-- Verified reduced-motion rules hide travelling smoke and retain static ceremony cues.
-- Verified low-power rendering removes secondary smoke layers rather than disabling the ritual.
-- Service-worker cache version advanced to `v2-2-priorityB`.
+- JavaScript syntax validated with `node --check`.
+- Runtime language-switch logic validated in a mocked browser DOM.
+- 8 categories confirmed.
+- 12 fortunes per category confirmed.
+- 96 English fortunes confirmed.
+- 96 Italian translations confirmed.
+- English and Italian interface dictionaries contain matching keys.
+- HTML element IDs are unique.
+- EN and IT language buttons are present and accessible.
+- Service-worker cache version updated to `v2-3-bilingual`.
 
-## Visual checks
+## Behaviour included
 
-Tested at a representative 430 × 932 mobile viewport:
+- Browser language chooses the initial language when no preference exists.
+- Selection is stored locally.
+- Language can be changed while a fortune is visible.
+- The existing fortune changes language without drawing a new fortune.
+- Dates, status messages, dialog text, share copy and exported image text follow the selected language.
+- `?lang=en` and `?lang=it` may be used for direct-language links.
 
-- Smoke originates around the interior bowl.
-- The mouth cloud contracts toward the nose during the inhale.
-- Exhaled smoke travels downward from two nostril origins.
-- The parchment remains below the mouth and appears after the exhale.
-- The V2.2 Priority A parchment styling remains intact.
+## Release checks still recommended
 
-## Known scope boundary
-
-Priority B does not redesign the Save, Share, or Try Again controls. Those remain reserved for Priority C.
+- Review Italian tone with a native Italian copy editor before an official park deployment.
+- Test Safari on iPhone and Chrome on Android.
+- Verify the longest Italian fortunes on small screens and in exported PNG files.
+- Test installed-PWA language persistence and offline reload on a physical device.

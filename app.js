@@ -11,123 +11,500 @@ const CATEGORY_STYLES = {
   routine: { hex: "#68758c", rgb: "104 117 140", label: "Routine", tone: 164.81 }
 };
 
+const COPY = {
+  "en": {
+    "documentTitle": "The Stone Oracle",
+    "metaDescription": "Touch the ancient stone and receive a short fortune.",
+    "loading": "Waking the stone",
+    "landscape": "Turn your device upright",
+    "controls": "Oracle controls",
+    "language": "Language",
+    "aboutAria": "About this experience",
+    "close": "Close",
+    "soundOff": "Turn sound off",
+    "soundOn": "Turn sound on",
+    "awakenAria": "Touch the stone to receive your fortune",
+    "invitation": "Touch the stone",
+    "fortuneAria": "Your fortune",
+    "actionsAria": "Fortune actions",
+    "paperKicker": "The stone has spoken",
+    "save": "Save image",
+    "share": "Share",
+    "again": "Touch the stone again",
+    "dialogKicker": "The Stone Oracle",
+    "dialogTitle": "One touch. One pronouncement.",
+    "dialogBody": "This is a digital fortune-machine prototype. Its messages are offered for amusement and reflection, not as factual predictions or professional advice.",
+    "motion": "Motion",
+    "motionFullDescription": "Stone movement, smoke and ceremonial transitions are enabled.",
+    "motionReducedDescription": "Smoke and movement are replaced with gentle fades.",
+    "motionFull": "Full",
+    "motionReduced": "Reduced",
+    "return": "Return to the stone",
+    "stirring": "The stone is stirring",
+    "gathering": "The smoke gathers",
+    "inhaling": "The stone draws breath",
+    "exhaling": "The oracle exhales",
+    "saved": "Fortune image saved",
+    "saveFailed": "Could not create the image",
+    "copied": "Fortune copied",
+    "shareUnavailable": "Sharing is unavailable",
+    "online": "Connection restored",
+    "offline": "Offline mode active",
+    "shareTitle": "The Stone Oracle",
+    "shareSays": "The Stone Oracle says",
+    "exportHeading": "THE STONE HAS SPOKEN",
+    "exportName": "THE STONE ORACLE"
+  },
+  "it": {
+    "documentTitle": "L'Oracolo di Pietra",
+    "metaDescription": "Tocca l'antica pietra e ricevi un breve responso.",
+    "loading": "La pietra si risveglia",
+    "landscape": "Ruota il dispositivo in verticale",
+    "controls": "Comandi dell'oracolo",
+    "language": "Lingua",
+    "aboutAria": "Informazioni sull'esperienza",
+    "close": "Chiudi",
+    "soundOff": "Disattiva il suono",
+    "soundOn": "Attiva il suono",
+    "awakenAria": "Tocca la pietra per ricevere il tuo responso",
+    "invitation": "Tocca la pietra",
+    "fortuneAria": "Il tuo responso",
+    "actionsAria": "Azioni del responso",
+    "paperKicker": "La pietra ha parlato",
+    "save": "Salva immagine",
+    "share": "Condividi",
+    "again": "Tocca ancora la pietra",
+    "dialogKicker": "L'Oracolo di Pietra",
+    "dialogTitle": "Un tocco. Un responso.",
+    "dialogBody": "Questo è il prototipo di una macchina divinatoria digitale. I suoi messaggi sono pensati per svago e riflessione, non come previsioni certe o consigli professionali.",
+    "motion": "Movimento",
+    "motionFullDescription": "Movimento della pietra, fumo e transizioni rituali sono attivi.",
+    "motionReducedDescription": "Fumo e movimento sono sostituiti da dissolvenze leggere.",
+    "motionFull": "Completo",
+    "motionReduced": "Ridotto",
+    "return": "Torna alla pietra",
+    "stirring": "La pietra si scuote",
+    "gathering": "Il fumo si raccoglie",
+    "inhaling": "La pietra inspira",
+    "exhaling": "L'oracolo espira",
+    "saved": "Immagine del responso salvata",
+    "saveFailed": "Impossibile creare l'immagine",
+    "copied": "Responso copiato",
+    "shareUnavailable": "Condivisione non disponibile",
+    "online": "Connessione ripristinata",
+    "offline": "Modalità offline attiva",
+    "shareTitle": "L'Oracolo di Pietra",
+    "shareSays": "L'Oracolo di Pietra dice",
+    "exportHeading": "LA PIETRA HA PARLATO",
+    "exportName": "L'ORACOLO DI PIETRA"
+  }
+};
+
 const FORTUNE_GROUPS = {
-  relationships: [
-    "Someone is waiting for your ordinary gesture.",
-    "A neglected friendship will soon ask for attention.",
-    "Your silence has been mistaken for agreement.",
-    "One honest reply will end a long uncertainty.",
-    "A distant person remembers more than you expect.",
-    "An apology will cost less than continued distance.",
-    "Someone close needs clarity, not reassurance.",
-    "A familiar name will return with unfamiliar news.",
-    "You are protecting pride at the expense of closeness.",
-    "A small kindness will travel farther than intended.",
-    "The conversation you avoid already shapes the relationship.",
-    "Someone values your presence more than your usefulness."
+  "relationships": [
+    {
+      "en": "Someone is waiting for your ordinary gesture.",
+      "it": "Qualcuno aspetta un tuo gesto semplice."
+    },
+    {
+      "en": "A neglected friendship will soon ask for attention.",
+      "it": "Un'amicizia trascurata chiederà presto attenzione."
+    },
+    {
+      "en": "Your silence has been mistaken for agreement.",
+      "it": "Il tuo silenzio è stato scambiato per assenso."
+    },
+    {
+      "en": "One honest reply will end a long uncertainty.",
+      "it": "Una risposta sincera porrà fine a una lunga incertezza."
+    },
+    {
+      "en": "A distant person remembers more than you expect.",
+      "it": "Una persona lontana ricorda più di quanto immagini."
+    },
+    {
+      "en": "An apology will cost less than continued distance.",
+      "it": "Chiedere scusa costerà meno che mantenere le distanze."
+    },
+    {
+      "en": "Someone close needs clarity, not reassurance.",
+      "it": "Una persona vicina ha bisogno di chiarezza, non di rassicurazioni."
+    },
+    {
+      "en": "A familiar name will return with unfamiliar news.",
+      "it": "Un nome familiare tornerà con notizie inattese."
+    },
+    {
+      "en": "You are protecting pride at the expense of closeness.",
+      "it": "Stai proteggendo l'orgoglio a scapito della vicinanza."
+    },
+    {
+      "en": "A small kindness will travel farther than intended.",
+      "it": "Un piccolo gesto di gentilezza arriverà più lontano del previsto."
+    },
+    {
+      "en": "The conversation you avoid already shapes the relationship.",
+      "it": "La conversazione che eviti sta già plasmando il rapporto."
+    },
+    {
+      "en": "Someone values your presence more than your usefulness.",
+      "it": "Qualcuno apprezza la tua presenza più della tua utilità."
+    }
   ],
-  action: [
-    "You are at risk of becoming too sedentary.",
-    "Movement will restore what routine has dulled.",
-    "You have prepared long enough. Begin now.",
-    "The next step is clear, though inconvenient.",
-    "A short journey will alter a long opinion.",
-    "One unfinished task is draining your attention.",
-    "Act before the simple choice becomes complicated.",
-    "Your next useful idea will arrive while moving.",
-    "Repair the small fault before replacing everything.",
-    "Today rewards motion more than planning.",
-    "A change of pace will outperform greater effort.",
-    "Do one physical thing before making the decision."
+  "action": [
+    {
+      "en": "You are at risk of becoming too sedentary.",
+      "it": "Rischi che la sedentarietà prenda il sopravvento."
+    },
+    {
+      "en": "Movement will restore what routine has dulled.",
+      "it": "Il movimento restituirà ciò che la routine ha spento."
+    },
+    {
+      "en": "You have prepared long enough. Begin now.",
+      "it": "La preparazione è durata abbastanza. Ora comincia."
+    },
+    {
+      "en": "The next step is clear, though inconvenient.",
+      "it": "Il prossimo passo è chiaro, anche se scomodo."
+    },
+    {
+      "en": "A short journey will alter a long opinion.",
+      "it": "Un breve viaggio cambierà un'opinione radicata."
+    },
+    {
+      "en": "One unfinished task is draining your attention.",
+      "it": "Un compito incompiuto sta consumando la tua attenzione."
+    },
+    {
+      "en": "Act before the simple choice becomes complicated.",
+      "it": "Agisci prima che una scelta semplice diventi complicata."
+    },
+    {
+      "en": "Your next useful idea will arrive while moving.",
+      "it": "La tua prossima idea utile arriverà mentre sei in movimento."
+    },
+    {
+      "en": "Repair the small fault before replacing everything.",
+      "it": "Ripara il piccolo guasto prima di sostituire tutto."
+    },
+    {
+      "en": "Today rewards motion more than planning.",
+      "it": "Oggi il movimento sarà più premiato della pianificazione."
+    },
+    {
+      "en": "A change of pace will outperform greater effort.",
+      "it": "Cambiare ritmo renderà più di uno sforzo maggiore."
+    },
+    {
+      "en": "Do one physical thing before making the decision.",
+      "it": "Fai qualcosa di fisico prima di prendere la decisione."
+    }
   ],
-  opportunity: [
-    "A quiet opportunity will arrive before a loud one.",
-    "An old interest is ready to become useful.",
-    "A forgotten skill will solve a new problem.",
-    "An ordinary place will soon become important.",
-    "Something saved for later is needed now.",
-    "A rejected path deserves one careful second look.",
-    "Your next gain will come from simplifying.",
-    "A useful connection begins with an unimportant conversation.",
-    "Look again at what appeared too small.",
-    "An overlooked invitation carries unexpected value.",
-    "The useful opening will not announce itself.",
-    "What seems accidental may deserve deliberate attention."
+  "opportunity": [
+    {
+      "en": "A quiet opportunity will arrive before a loud one.",
+      "it": "Un'opportunità discreta arriverà prima di una rumorosa."
+    },
+    {
+      "en": "An old interest is ready to become useful.",
+      "it": "Un vecchio interesse è pronto a diventare utile."
+    },
+    {
+      "en": "A forgotten skill will solve a new problem.",
+      "it": "Un'abilità dimenticata risolverà un problema nuovo."
+    },
+    {
+      "en": "An ordinary place will soon become important.",
+      "it": "Un luogo ordinario diventerà presto importante."
+    },
+    {
+      "en": "Something saved for later is needed now.",
+      "it": "Ciò che conservavi per dopo serve adesso."
+    },
+    {
+      "en": "A rejected path deserves one careful second look.",
+      "it": "Una strada scartata merita un secondo sguardo attento."
+    },
+    {
+      "en": "Your next gain will come from simplifying.",
+      "it": "Il tuo prossimo vantaggio verrà dalla semplicità."
+    },
+    {
+      "en": "A useful connection begins with an unimportant conversation.",
+      "it": "Un legame utile nascerà da una conversazione insignificante."
+    },
+    {
+      "en": "Look again at what appeared too small.",
+      "it": "Guarda di nuovo ciò che sembrava troppo piccolo."
+    },
+    {
+      "en": "An overlooked invitation carries unexpected value.",
+      "it": "Un invito trascurato nasconde un valore inatteso."
+    },
+    {
+      "en": "The useful opening will not announce itself.",
+      "it": "L'apertura utile non si annuncerà."
+    },
+    {
+      "en": "What seems accidental may deserve deliberate attention.",
+      "it": "Ciò che sembra casuale potrebbe meritare attenzione consapevole."
+    }
   ],
-  reflection: [
-    "Rest is needed. Isolation is not.",
-    "Your attention is being spent where it is not required.",
-    "The waiting time is not wasted. Use it well.",
-    "Your best answer will be shorter than expected.",
-    "One quiet morning will solve a noisy problem.",
-    "Your body has noticed what your mind postpones.",
-    "The truth is less dramatic and more useful.",
-    "A temporary condition is not your identity.",
-    "One night of genuine rest will clarify the answer.",
-    "Your hesitation contains information. Listen before choosing.",
-    "Step back before adding another solution.",
-    "A slower answer will prove more accurate."
+  "reflection": [
+    {
+      "en": "Rest is needed. Isolation is not.",
+      "it": "Hai bisogno di riposo, non di isolamento."
+    },
+    {
+      "en": "Your attention is being spent where it is not required.",
+      "it": "Stai spendendo attenzione dove non è richiesta."
+    },
+    {
+      "en": "The waiting time is not wasted. Use it well.",
+      "it": "Il tempo dell'attesa non è sprecato. Usalo bene."
+    },
+    {
+      "en": "Your best answer will be shorter than expected.",
+      "it": "La tua risposta migliore sarà più breve del previsto."
+    },
+    {
+      "en": "One quiet morning will solve a noisy problem.",
+      "it": "Una mattina quieta risolverà un problema rumoroso."
+    },
+    {
+      "en": "Your body has noticed what your mind postpones.",
+      "it": "Il corpo ha notato ciò che la mente rimanda."
+    },
+    {
+      "en": "The truth is less dramatic and more useful.",
+      "it": "La verità è meno drammatica e più utile."
+    },
+    {
+      "en": "A temporary condition is not your identity.",
+      "it": "Una condizione temporanea non definisce chi sei."
+    },
+    {
+      "en": "One night of genuine rest will clarify the answer.",
+      "it": "Una notte di vero riposo renderà chiara la risposta."
+    },
+    {
+      "en": "Your hesitation contains information. Listen before choosing.",
+      "it": "La tua esitazione contiene indizi. Ascoltali prima di scegliere."
+    },
+    {
+      "en": "Step back before adding another solution.",
+      "it": "Fai un passo indietro prima di aggiungere un'altra soluzione."
+    },
+    {
+      "en": "A slower answer will prove more accurate.",
+      "it": "Una risposta più lenta si rivelerà più accurata."
+    }
   ],
-  change: [
-    "You have outgrown a habit that still owns your time.",
-    "A useful ending is approaching. Let it end.",
-    "Comfort is becoming more expensive than change.",
-    "Something finished still has one lesson remaining.",
-    "A familiar problem requires an unfamiliar response.",
-    "Remove something before acquiring something else.",
-    "A private ambition has grown too large to hide.",
-    "Change one ordinary thing tomorrow.",
-    "You are nearer to a beginning than an ending.",
-    "The old arrangement no longer fits the new need.",
-    "Release what only survives through repetition.",
-    "A small departure will reveal the larger direction."
+  "change": [
+    {
+      "en": "You have outgrown a habit that still owns your time.",
+      "it": "Hai superato un'abitudine che possiede ancora il tuo tempo."
+    },
+    {
+      "en": "A useful ending is approaching. Let it end.",
+      "it": "Si avvicina una conclusione utile. Lascia che avvenga."
+    },
+    {
+      "en": "Comfort is becoming more expensive than change.",
+      "it": "La comodità sta diventando più costosa del cambiamento."
+    },
+    {
+      "en": "Something finished still has one lesson remaining.",
+      "it": "Qualcosa di concluso conserva ancora una lezione."
+    },
+    {
+      "en": "A familiar problem requires an unfamiliar response.",
+      "it": "Un problema familiare richiede una risposta insolita."
+    },
+    {
+      "en": "Remove something before acquiring something else.",
+      "it": "Togli qualcosa prima di acquisire altro."
+    },
+    {
+      "en": "A private ambition has grown too large to hide.",
+      "it": "Un'ambizione privata è diventata troppo grande per restare nascosta."
+    },
+    {
+      "en": "Change one ordinary thing tomorrow.",
+      "it": "Domani cambia una cosa ordinaria."
+    },
+    {
+      "en": "You are nearer to a beginning than an ending.",
+      "it": "Sei più vicino a un inizio che a una fine."
+    },
+    {
+      "en": "The old arrangement no longer fits the new need.",
+      "it": "Il vecchio assetto non risponde più al nuovo bisogno."
+    },
+    {
+      "en": "Release what only survives through repetition.",
+      "it": "Lascia andare ciò che sopravvive soltanto per ripetizione."
+    },
+    {
+      "en": "A small departure will reveal the larger direction.",
+      "it": "Una piccola deviazione rivelerà la direzione più grande."
+    }
   ],
-  warning: [
-    "Your caution is beginning to resemble fear.",
-    "A delayed decision is quietly growing larger.",
-    "Do not confuse familiarity with safety.",
-    "Something you envy carries an unseen cost.",
-    "A pleasant distraction is becoming an obligation.",
-    "A minor repair will prevent a larger inconvenience.",
-    "You are carrying responsibility nobody gave you.",
-    "Bad timing may be fortunate protection.",
-    "One ignored detail will soon demand attention.",
-    "Your certainty is hiding an untested assumption.",
-    "The easier route has a cost you have missed.",
-    "A promise made casually is becoming serious."
+  "warning": [
+    {
+      "en": "Your caution is beginning to resemble fear.",
+      "it": "La tua prudenza comincia a somigliare alla paura."
+    },
+    {
+      "en": "A delayed decision is quietly growing larger.",
+      "it": "Una decisione rimandata sta crescendo in silenzio."
+    },
+    {
+      "en": "Do not confuse familiarity with safety.",
+      "it": "Non confondere la familiarità con la sicurezza."
+    },
+    {
+      "en": "Something you envy carries an unseen cost.",
+      "it": "Ciò che invidi ha un costo nascosto."
+    },
+    {
+      "en": "A pleasant distraction is becoming an obligation.",
+      "it": "Una piacevole distrazione sta diventando un obbligo."
+    },
+    {
+      "en": "A minor repair will prevent a larger inconvenience.",
+      "it": "Una piccola riparazione eviterà un disagio maggiore."
+    },
+    {
+      "en": "You are carrying responsibility nobody gave you.",
+      "it": "Stai portando una responsabilità che nessuno ti ha dato."
+    },
+    {
+      "en": "Bad timing may be fortunate protection.",
+      "it": "Quello che sembra un cattivo momento potrebbe proteggerti."
+    },
+    {
+      "en": "One ignored detail will soon demand attention.",
+      "it": "Un dettaglio ignorato chiederà presto attenzione."
+    },
+    {
+      "en": "Your certainty is hiding an untested assumption.",
+      "it": "La tua certezza nasconde un'ipotesi mai verificata."
+    },
+    {
+      "en": "The easier route has a cost you have missed.",
+      "it": "La via più facile ha un costo che non hai visto."
+    },
+    {
+      "en": "A promise made casually is becoming serious.",
+      "it": "Una promessa fatta con leggerezza sta diventando seria."
+    }
   ],
-  courage: [
-    "You are waiting for permission that will never arrive.",
-    "A small act of courage will prevent regret.",
-    "Saying no will soon protect something important.",
-    "Ask clearly. Hinting has cost enough time.",
-    "Stop trying to please an absent audience.",
-    "Choose the relief, not the applause.",
-    "A small boundary will protect a larger freedom.",
-    "Your instinct was right. Your timing was not.",
-    "Speak before silence becomes your answer.",
-    "The difficult truth will simplify the next step.",
-    "You already know which choice requires courage.",
-    "Confidence will follow action, not precede it."
+  "courage": [
+    {
+      "en": "You are waiting for permission that will never arrive.",
+      "it": "Aspetti un permesso che non arriverà mai."
+    },
+    {
+      "en": "A small act of courage will prevent regret.",
+      "it": "Un piccolo atto di coraggio eviterà un rimpianto."
+    },
+    {
+      "en": "Saying no will soon protect something important.",
+      "it": "Dire di no proteggerà presto qualcosa di importante."
+    },
+    {
+      "en": "Ask clearly. Hinting has cost enough time.",
+      "it": "Chiedi con chiarezza. Le allusioni sono già costate abbastanza tempo."
+    },
+    {
+      "en": "Stop trying to please an absent audience.",
+      "it": "Smetti di cercare di compiacere un pubblico assente."
+    },
+    {
+      "en": "Choose the relief, not the applause.",
+      "it": "Scegli il sollievo, non l'applauso."
+    },
+    {
+      "en": "A small boundary will protect a larger freedom.",
+      "it": "Un piccolo confine proteggerà una libertà più grande."
+    },
+    {
+      "en": "Your instinct was right. Your timing was not.",
+      "it": "Il tuo istinto aveva ragione. Il momento era sbagliato."
+    },
+    {
+      "en": "Speak before silence becomes your answer.",
+      "it": "Parla prima che il silenzio diventi la tua risposta."
+    },
+    {
+      "en": "The difficult truth will simplify the next step.",
+      "it": "La verità difficile renderà più semplice il prossimo passo."
+    },
+    {
+      "en": "You already know which choice requires courage.",
+      "it": "Sai già quale scelta richiede coraggio."
+    },
+    {
+      "en": "Confidence will follow action, not precede it.",
+      "it": "La fiducia seguirà l'azione, non la precederà."
+    }
   ],
-  routine: [
-    "You have mistaken stillness for patience.",
-    "Comfort has begun making your choices for you.",
-    "The habit you defend deserves examination.",
-    "You are spending energy on an already-made decision.",
-    "Consistency will matter more than intensity.",
-    "One room contains too much unfinished business.",
-    "Your surroundings are asking for one deliberate change.",
-    "Remove one unnecessary part from your plan.",
-    "Repetition is hiding a choice you could change.",
-    "Your routine needs interruption, not abandonment.",
-    "The familiar method is no longer the efficient one.",
-    "What once helped you now merely occupies time."
+  "routine": [
+    {
+      "en": "You have mistaken stillness for patience.",
+      "it": "Hai scambiato l'immobilità per pazienza."
+    },
+    {
+      "en": "Comfort has begun making your choices for you.",
+      "it": "La comodità ha iniziato a scegliere al posto tuo."
+    },
+    {
+      "en": "The habit you defend deserves examination.",
+      "it": "L'abitudine che difendi merita di essere esaminata."
+    },
+    {
+      "en": "You are spending energy on an already-made decision.",
+      "it": "Stai spendendo energia su una decisione già presa."
+    },
+    {
+      "en": "Consistency will matter more than intensity.",
+      "it": "La costanza conterà più dell'intensità."
+    },
+    {
+      "en": "One room contains too much unfinished business.",
+      "it": "Una stanza contiene troppe cose lasciate a metà."
+    },
+    {
+      "en": "Your surroundings are asking for one deliberate change.",
+      "it": "Ciò che ti circonda chiede un cambiamento intenzionale."
+    },
+    {
+      "en": "Remove one unnecessary part from your plan.",
+      "it": "Togli una parte inutile dal tuo piano."
+    },
+    {
+      "en": "Repetition is hiding a choice you could change.",
+      "it": "La ripetizione nasconde una scelta che potresti cambiare."
+    },
+    {
+      "en": "Your routine needs interruption, not abandonment.",
+      "it": "La tua routine ha bisogno di un'interruzione, non di essere abbandonata."
+    },
+    {
+      "en": "The familiar method is no longer the efficient one.",
+      "it": "Il metodo familiare non è più il più efficiente."
+    },
+    {
+      "en": "What once helped you now merely occupies time.",
+      "it": "Ciò che un tempo ti aiutava ora occupa soltanto il tuo tempo."
+    }
   ]
 };
 
-const FORTUNES = Object.entries(FORTUNE_GROUPS).flatMap(([category, texts]) =>
-  texts.map((text, index) => ({
+const FORTUNES = Object.entries(FORTUNE_GROUPS).flatMap(([category, entries]) =>
+  entries.map((text, index) => ({
     id: `${category}-${String(index + 1).padStart(2, "0")}`,
     category,
     text,
@@ -135,6 +512,14 @@ const FORTUNES = Object.entries(FORTUNE_GROUPS).flatMap(([category, texts]) =>
     enabled: true
   }))
 );
+
+function getCopy(key) {
+  return COPY[currentLanguage]?.[key] || COPY.en[key] || key;
+}
+
+function getFortuneText(fortune, language = currentLanguage) {
+  return fortune?.text?.[language] || fortune?.text?.en || "";
+}
 
 const app = document.getElementById("app");
 const awakenButton = document.getElementById("awakenButton");
@@ -157,11 +542,27 @@ const motionStatus = document.getElementById("motionStatus");
 const toast = document.getElementById("toast");
 const loadingVeil = document.getElementById("loadingVeil");
 const fortunePaper = document.getElementById("fortunePaper");
+const utilityNav = document.getElementById("utilityNav");
+const languageSwitch = document.getElementById("languageSwitch");
+const languageButtons = [...document.querySelectorAll("[data-language]")];
+const loadingText = document.getElementById("loadingText");
+const landscapeText = document.getElementById("landscapeText");
+const invitationText = document.getElementById("invitationText");
+const paperKicker = document.getElementById("paperKicker");
+const saveLabel = document.getElementById("saveLabel");
+const shareLabel = document.getElementById("shareLabel");
+const againLabel = document.getElementById("againLabel");
+const dialogKicker = document.getElementById("dialogKicker");
+const dialogTitle = document.getElementById("dialogTitle");
+const dialogBody = document.getElementById("dialogBody");
+const motionLabel = document.getElementById("motionLabel");
+const metaDescription = document.getElementById("metaDescription");
 
 const RECENT_KEY = "stone-oracle-recent-v21";
 const SOUND_KEY = "stone-oracle-sound-v21";
 const HISTORY_KEY = "stone-oracle-history-v21";
 const MOTION_KEY = "stone-oracle-motion-v21";
+const LANGUAGE_KEY = "stone-oracle-language-v23";
 
 const TIMINGS = {
   full: { awakening: 760, gathering: 1180, inhaling: 570, exhaling: 1080, revealing: 820 },
@@ -170,6 +571,9 @@ const TIMINGS = {
 
 let state = "idle";
 let currentFortune = null;
+let currentLanguage = localStorage.getItem(LANGUAGE_KEY) ||
+  (navigator.language?.toLowerCase().startsWith("it") ? "it" : "en");
+let activeStatusKey = "";
 let soundOn = localStorage.getItem(SOUND_KEY) !== "off";
 let motionMode = localStorage.getItem(MOTION_KEY) ||
   (window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "reduced" : "full");
@@ -228,10 +632,55 @@ function applyMotionPreference() {
   app.dataset.motion = motionMode;
   const reduced = isReducedMotion();
   motionButton.setAttribute("aria-pressed", String(reduced));
-  motionButton.textContent = reduced ? "Reduced" : "Full";
+  motionButton.textContent = reduced ? getCopy("motionReduced") : getCopy("motionFull");
   motionStatus.textContent = reduced
-    ? "Smoke and movement are replaced with gentle fades."
-    : "Stone movement, smoke and ceremonial transitions are enabled.";
+    ? getCopy("motionReducedDescription")
+    : getCopy("motionFullDescription");
+}
+
+function applyLanguage(language, { persist = true } = {}) {
+  currentLanguage = language === "it" ? "it" : "en";
+  if (persist) localStorage.setItem(LANGUAGE_KEY, currentLanguage);
+
+  const copy = COPY[currentLanguage];
+  document.documentElement.lang = currentLanguage;
+  document.title = copy.documentTitle;
+  metaDescription?.setAttribute("content", copy.metaDescription);
+  app.dataset.language = currentLanguage;
+
+  loadingText.textContent = copy.loading;
+  landscapeText.textContent = copy.landscape;
+  utilityNav.setAttribute("aria-label", copy.controls);
+  languageSwitch.setAttribute("aria-label", copy.language);
+  infoButton.setAttribute("aria-label", copy.aboutAria);
+  closeDialogButton.setAttribute("aria-label", copy.close);
+  awakenButton.setAttribute("aria-label", copy.awakenAria);
+  invitationText.textContent = copy.invitation;
+  fortunePaper.setAttribute("aria-label", copy.fortuneAria);
+  resultActions.setAttribute("aria-label", copy.actionsAria);
+  paperKicker.textContent = copy.paperKicker;
+  saveLabel.textContent = copy.save;
+  shareLabel.textContent = copy.share;
+  againLabel.textContent = copy.again;
+  dialogKicker.textContent = copy.dialogKicker;
+  dialogTitle.textContent = copy.dialogTitle;
+  dialogBody.textContent = copy.dialogBody;
+  motionLabel.textContent = copy.motion;
+  dialogActionButton.textContent = copy.return;
+
+  languageButtons.forEach(button => {
+    const selected = button.dataset.language === currentLanguage;
+    button.setAttribute("aria-pressed", String(selected));
+    button.classList.toggle("selected", selected);
+  });
+
+  updateSoundButton();
+  applyMotionPreference();
+  if (activeStatusKey) setStatus(activeStatusKey);
+  if (currentFortune) {
+    fortuneText.textContent = getFortuneText(currentFortune);
+    fortuneDate.textContent = formatDate();
+  }
 }
 
 function haptic(pattern) {
@@ -312,7 +761,7 @@ function recordFortune(fortune) {
 
   history.unshift({
     id: fortune.id,
-    text: fortune.text,
+    text: getFortuneText(fortune),
     category: fortune.category,
     date: new Date().toISOString()
   });
@@ -321,7 +770,8 @@ function recordFortune(fortune) {
 }
 
 function formatDate(date = new Date()) {
-  return new Intl.DateTimeFormat(undefined, {
+  const locale = currentLanguage === "it" ? "it-IT" : "en-GB";
+  return new Intl.DateTimeFormat(locale, {
     day: "2-digit",
     month: "long",
     year: "numeric"
@@ -504,12 +954,13 @@ function playToggleTick() {
 
 function updateSoundButton() {
   soundButton.setAttribute("aria-pressed", String(soundOn));
-  soundButton.setAttribute("aria-label", soundOn ? "Turn sound off" : "Turn sound on");
+  soundButton.setAttribute("aria-label", soundOn ? getCopy("soundOff") : getCopy("soundOn"));
   soundIcon.textContent = soundOn ? "♪" : "×";
 }
 
-function setStatus(text) {
-  statusText.textContent = text;
+function setStatus(key = "") {
+  activeStatusKey = key;
+  statusText.textContent = key ? getCopy(key) : "";
 }
 
 function setActionBusy(isBusy) {
@@ -525,7 +976,7 @@ async function awakenOracle() {
 
   currentFortune = chooseFortune();
   applyCategory(currentFortune.category);
-  fortuneText.textContent = currentFortune.text;
+  fortuneText.textContent = getFortuneText(currentFortune);
   fortuneDate.textContent = formatDate();
   paperWindow.setAttribute("aria-hidden", "true");
   resultActions.setAttribute("aria-hidden", "true");
@@ -533,7 +984,7 @@ async function awakenOracle() {
 
   const timing = isReducedMotion() ? TIMINGS.reduced : TIMINGS.full;
 
-  setStatus("The stone is stirring");
+  setStatus("stirring");
   haptic(18);
   await Promise.race([awakeReadyPromise, delay(220)]);
   setState("awakening");
@@ -542,19 +993,19 @@ async function awakenOracle() {
 
   await delay(timing.awakening);
   setState("gathering");
-  setStatus("The smoke gathers");
+  setStatus("gathering");
   playGatheringBreath();
   haptic(12);
 
   await delay(timing.gathering);
   setState("inhaling");
-  setStatus("The stone draws breath");
+  setStatus("inhaling");
   playInhaleBreath();
   haptic([10, 28, 14]);
 
   await delay(timing.inhaling);
   setState("exhaling");
-  setStatus("The oracle exhales");
+  setStatus("exhaling");
   playExhaleBreath();
   haptic([20, 30, 42]);
 
@@ -590,9 +1041,9 @@ async function resetOracle() {
   if (returnFocus) awakenButton.focus({ preventScroll: true });
 }
 
-function showToast(message) {
+function showToast(messageOrKey) {
   window.clearTimeout(toastTimer);
-  toast.textContent = message;
+  toast.textContent = COPY[currentLanguage]?.[messageOrKey] || messageOrKey;
   toast.classList.add("visible");
   toastTimer = window.setTimeout(() => toast.classList.remove("visible"), 1900);
 }
@@ -841,15 +1292,23 @@ async function createFortuneBlob() {
   ctx.textBaseline = "alphabetic";
   ctx.fillStyle = "rgba(57, 33, 15, .92)";
   ctx.font = '600 23px "Times New Roman", Times, serif';
-  drawTrackedText(ctx, "THE STONE HAS SPOKEN", 540, y + 108, 4.4);
+  drawTrackedText(ctx, getCopy("exportHeading"), 540, y + 108, currentLanguage === "it" ? 3.6 : 4.4);
 
   ctx.textAlign = "center";
   ctx.fillStyle = "#25170d";
-  ctx.font = '500 50px "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif';
-  const lines = wrapText(ctx, currentFortune.text, 800).slice(0, 3);
-  const lineHeight = 59;
+  const exportFortune = getFortuneText(currentFortune);
+  let fontSize = currentLanguage === "it" ? 46 : 50;
+  let lines = [];
+  do {
+    ctx.font = `500 ${fontSize}px "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif`;
+    lines = wrapText(ctx, exportFortune, 800);
+    if (lines.length <= 4) break;
+    fontSize -= 2;
+  } while (fontSize >= 38);
+  lines = lines.slice(0, 4);
+  const lineHeight = Math.round(fontSize * 1.18);
   const textBlockHeight = Math.max(1, lines.length) * lineHeight;
-  const startY = y + 215 - textBlockHeight / 2 + lineHeight * .72;
+  const startY = y + 220 - textBlockHeight / 2 + lineHeight * .72;
   lines.forEach((line, index) => ctx.fillText(line, 540, startY + index * lineHeight));
 
   const ruleY = y + height - 104;
@@ -878,7 +1337,7 @@ async function createFortuneBlob() {
 
   ctx.fillStyle = "rgba(72, 43, 20, .68)";
   ctx.font = 'italic 15px "Palatino Linotype", Palatino, Georgia, serif';
-  drawTrackedText(ctx, "OGNI PENSIERO VOLA  ·  THE STONE ORACLE", 540, y + height - 31, 1.8);
+  drawTrackedText(ctx, `OGNI PENSIERO VOLA  ·  ${getCopy("exportName")}`, 540, y + height - 31, currentLanguage === "it" ? 1.45 : 1.8);
 
   return new Promise(resolve => canvas.toBlob(resolve, "image/png"));
 }
@@ -897,9 +1356,9 @@ async function saveFortune() {
     link.click();
     link.remove();
     window.setTimeout(() => URL.revokeObjectURL(url), 1200);
-    showToast("Fortune image saved");
+    showToast("saved");
   } catch {
-    showToast("Could not create the image");
+    showToast("saveFailed");
   } finally {
     setActionBusy(false);
   }
@@ -909,7 +1368,7 @@ async function shareFortune() {
   if (!currentFortune || actionBusy) return;
   setActionBusy(true);
 
-  const text = `The Stone Oracle says: “${currentFortune.text}”`;
+  const text = `${getCopy("shareSays")}: “${getFortuneText(currentFortune)}”`;
 
   try {
     const blob = await createFortuneBlob();
@@ -919,7 +1378,7 @@ async function shareFortune() {
 
     if (file && navigator.share && navigator.canShare?.({ files: [file] })) {
       await navigator.share({
-        title: "The Stone Oracle",
+        title: getCopy("shareTitle"),
         text,
         files: [file]
       });
@@ -927,19 +1386,19 @@ async function shareFortune() {
     }
 
     if (navigator.share) {
-      await navigator.share({ title: "The Stone Oracle", text });
+      await navigator.share({ title: getCopy("shareTitle"), text });
       return;
     }
 
     await navigator.clipboard.writeText(text);
-    showToast("Fortune copied");
+    showToast("copied");
   } catch (error) {
     if (error?.name !== "AbortError") {
       try {
         await navigator.clipboard.writeText(text);
-        showToast("Fortune copied");
+        showToast("copied");
       } catch {
-        showToast("Sharing is unavailable");
+        showToast("shareUnavailable");
       }
     }
   } finally {
@@ -951,6 +1410,16 @@ awakenButton.addEventListener("click", awakenOracle);
 againButton.addEventListener("click", resetOracle);
 saveButton.addEventListener("click", saveFortune);
 shareButton.addEventListener("click", shareFortune);
+
+languageButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const language = button.dataset.language;
+    if (!language || language === currentLanguage) return;
+    applyLanguage(language);
+    haptic(12);
+    playToggleTick();
+  });
+});
 
 soundButton.addEventListener("click", () => {
   const wasOn = soundOn;
@@ -984,8 +1453,10 @@ window.addEventListener("keydown", event => {
 });
 
 async function initialize() {
-  updateSoundButton();
-  applyMotionPreference();
+  const startupParams = new URLSearchParams(location.search);
+  const requestedLanguage = startupParams.get("lang");
+  if (requestedLanguage === "en" || requestedLanguage === "it") currentLanguage = requestedLanguage;
+  applyLanguage(currentLanguage, { persist: Boolean(requestedLanguage) });
   applyCategory("reflection");
 
   const systemMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -1001,7 +1472,7 @@ async function initialize() {
 
   await prepareSceneAssets();
 
-  const params = new URLSearchParams(location.search);
+  const params = startupParams;
   const preview = params.get("preview");
   if (preview) {
     const previewStates = {
@@ -1017,7 +1488,7 @@ async function initialize() {
     const previewCategory = CATEGORY_STYLES[requestedCategory] ? requestedCategory : "relationships";
     currentFortune = FORTUNES.find(item => item.category === previewCategory) || FORTUNES[0];
     applyCategory(currentFortune.category);
-    fortuneText.textContent = currentFortune.text;
+    fortuneText.textContent = getFortuneText(currentFortune);
     fortuneDate.textContent = formatDate();
     const showPaper = previewState === "revealed";
     resultActions.setAttribute("aria-hidden", showPaper ? "false" : "true");
@@ -1027,7 +1498,7 @@ async function initialize() {
   }
 }
 
-window.addEventListener("online", () => showToast("Connection restored"));
-window.addEventListener("offline", () => showToast("Offline mode active"));
+window.addEventListener("online", () => showToast("online"));
+window.addEventListener("offline", () => showToast("offline"));
 
 initialize();

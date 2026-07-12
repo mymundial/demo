@@ -1,31 +1,17 @@
-# The Stone Oracle — V2.2 Priority B
+# Stone Oracle V2.3 — English / Italian
 
-Priority B rebuilds the ceremonial smoke sequence so the monster appears to breathe the fortune into existence.
+Bilingual release based on V2.2 Priority B.
 
-## What changed
+## Included
 
-- The bowl inside the mouth now ignites before the smoke appears.
-- Smoke gathers and thickens inside the mouth cavity.
-- The gathered smoke contracts upward as the stone draws breath.
-- Two category-coloured streams pull toward the nostrils during the inhale.
-- The oracle exhales coloured smoke downward from both nostrils.
-- The exhale leads directly into the bottom parchment reveal.
-- Eye brightness now escalates across the gathering, inhale, and exhale phases.
-- Added separate gathering, inhale, and exhale sound envelopes.
-- Added reduced-motion and low-power fallbacks for the new breath sequence.
-- Retained the V2.2 Priority A Renaissance parchment and export styling.
-
-## Ceremony timing
-
-```text
-Bowl ignition
-→ smoke gathers in the mouth
-→ the stone inhales
-→ smoke exhales from the nostrils
-→ parchment reveals below
-```
-
-The full-motion ritual takes approximately 4.4 seconds before the result is complete.
+- 96 original fortunes in English
+- 96 manually written Italian translations
+- Persistent EN/IT flag selector
+- Automatic first-language choice from the browser
+- Live language switching before or after a reading
+- Localised ritual messages, parchment, dates, dialogs, sharing and exported images
+- Existing bowl → mouth gathering → inhale → nostril exhale sequence
+- Offline PWA support
 
 ## Run locally
 
@@ -33,16 +19,15 @@ The full-motion ritual takes approximately 4.4 seconds before the result is comp
 python3 -m http.server 8080
 ```
 
-Then open `http://localhost:8080/` from this folder.
+Open `http://localhost:8080/`.
 
-## Preview states
+## Preview parameters
 
-- `?preview=gathering&category=relationships`
-- `?preview=inhale&category=reflection`
-- `?preview=exhale&category=change`
-- `?preview=smoke&category=warning` — alias for the exhale state
-- `?preview=relationships` — revealed relationship fortune
+- English reveal: `?preview=revealed&category=relationships`
+- Italian reveal: set Italian in the selector, then reload; the preference persists
 
-## Release note
+No account, backend, AI or personal-data collection is used.
 
-This is an independent concept prototype and is not presented as an official Sacro Bosco or Parco dei Mostri product.
+The file `fortunes-bilingual.json` contains all 96 paired English/Italian fortunes for editorial review.
+
+Direct links can select a language with `?lang=en` or `?lang=it`.

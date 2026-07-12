@@ -1,6 +1,6 @@
 "use strict";
 
-const VERSION = "v2-2-priorityB";
+const VERSION = "v2-3-bilingual";
 const SHELL_CACHE = `stone-oracle-shell-${VERSION}`;
 const RUNTIME_CACHE = `stone-oracle-runtime-${VERSION}`;
 const APP_SHELL = [

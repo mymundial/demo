@@ -1,0 +1,578 @@
+[
+  {
+    "id": "relationships-01",
+    "category": "relationships",
+    "en": "Someone is waiting for your ordinary gesture.",
+    "it": "Qualcuno aspetta un tuo gesto semplice."
+  },
+  {
+    "id": "relationships-02",
+    "category": "relationships",
+    "en": "A neglected friendship will soon ask for attention.",
+    "it": "Un'amicizia trascurata chiederà presto attenzione."
+  },
+  {
+    "id": "relationships-03",
+    "category": "relationships",
+    "en": "Your silence has been mistaken for agreement.",
+    "it": "Il tuo silenzio è stato scambiato per assenso."
+  },
+  {
+    "id": "relationships-04",
+    "category": "relationships",
+    "en": "One honest reply will end a long uncertainty.",
+    "it": "Una risposta sincera porrà fine a una lunga incertezza."
+  },
+  {
+    "id": "relationships-05",
+    "category": "relationships",
+    "en": "A distant person remembers more than you expect.",
+    "it": "Una persona lontana ricorda più di quanto immagini."
+  },
+  {
+    "id": "relationships-06",
+    "category": "relationships",
+    "en": "An apology will cost less than continued distance.",
+    "it": "Chiedere scusa costerà meno che mantenere le distanze."
+  },
+  {
+    "id": "relationships-07",
+    "category": "relationships",
+    "en": "Someone close needs clarity, not reassurance.",
+    "it": "Una persona vicina ha bisogno di chiarezza, non di rassicurazioni."
+  },
+  {
+    "id": "relationships-08",
+    "category": "relationships",
+    "en": "A familiar name will return with unfamiliar news.",
+    "it": "Un nome familiare tornerà con notizie inattese."
+  },
+  {
+    "id": "relationships-09",
+    "category": "relationships",
+    "en": "You are protecting pride at the expense of closeness.",
+    "it": "Stai proteggendo l'orgoglio a scapito della vicinanza."
+  },
+  {
+    "id": "relationships-10",
+    "category": "relationships",
+    "en": "A small kindness will travel farther than intended.",
+    "it": "Un piccolo gesto di gentilezza arriverà più lontano del previsto."
+  },
+  {
+    "id": "relationships-11",
+    "category": "relationships",
+    "en": "The conversation you avoid already shapes the relationship.",
+    "it": "La conversazione che eviti sta già plasmando il rapporto."
+  },
+  {
+    "id": "relationships-12",
+    "category": "relationships",
+    "en": "Someone values your presence more than your usefulness.",
+    "it": "Qualcuno apprezza la tua presenza più della tua utilità."
+  },
+  {
+    "id": "action-01",
+    "category": "action",
+    "en": "You are at risk of becoming too sedentary.",
+    "it": "Rischi che la sedentarietà prenda il sopravvento."
+  },
+  {
+    "id": "action-02",
+    "category": "action",
+    "en": "Movement will restore what routine has dulled.",
+    "it": "Il movimento restituirà ciò che la routine ha spento."
+  },
+  {
+    "id": "action-03",
+    "category": "action",
+    "en": "You have prepared long enough. Begin now.",
+    "it": "La preparazione è durata abbastanza. Ora comincia."
+  },
+  {
+    "id": "action-04",
+    "category": "action",
+    "en": "The next step is clear, though inconvenient.",
+    "it": "Il prossimo passo è chiaro, anche se scomodo."
+  },
+  {
+    "id": "action-05",
+    "category": "action",
+    "en": "A short journey will alter a long opinion.",
+    "it": "Un breve viaggio cambierà un'opinione radicata."
+  },
+  {
+    "id": "action-06",
+    "category": "action",
+    "en": "One unfinished task is draining your attention.",
+    "it": "Un compito incompiuto sta consumando la tua attenzione."
+  },
+  {
+    "id": "action-07",
+    "category": "action",
+    "en": "Act before the simple choice becomes complicated.",
+    "it": "Agisci prima che una scelta semplice diventi complicata."
+  },
+  {
+    "id": "action-08",
+    "category": "action",
+    "en": "Your next useful idea will arrive while moving.",
+    "it": "La tua prossima idea utile arriverà mentre sei in movimento."
+  },
+  {
+    "id": "action-09",
+    "category": "action",
+    "en": "Repair the small fault before replacing everything.",
+    "it": "Ripara il piccolo guasto prima di sostituire tutto."
+  },
+  {
+    "id": "action-10",
+    "category": "action",
+    "en": "Today rewards motion more than planning.",
+    "it": "Oggi il movimento sarà più premiato della pianificazione."
+  },
+  {
+    "id": "action-11",
+    "category": "action",
+    "en": "A change of pace will outperform greater effort.",
+    "it": "Cambiare ritmo renderà più di uno sforzo maggiore."
+  },
+  {
+    "id": "action-12",
+    "category": "action",
+    "en": "Do one physical thing before making the decision.",
+    "it": "Fai qualcosa di fisico prima di prendere la decisione."
+  },
+  {
+    "id": "opportunity-01",
+    "category": "opportunity",
+    "en": "A quiet opportunity will arrive before a loud one.",
+    "it": "Un'opportunità discreta arriverà prima di una rumorosa."
+  },
+  {
+    "id": "opportunity-02",
+    "category": "opportunity",
+    "en": "An old interest is ready to become useful.",
+    "it": "Un vecchio interesse è pronto a diventare utile."
+  },
+  {
+    "id": "opportunity-03",
+    "category": "opportunity",
+    "en": "A forgotten skill will solve a new problem.",
+    "it": "Un'abilità dimenticata risolverà un problema nuovo."
+  },
+  {
+    "id": "opportunity-04",
+    "category": "opportunity",
+    "en": "An ordinary place will soon become important.",
+    "it": "Un luogo ordinario diventerà presto importante."
+  },
+  {
+    "id": "opportunity-05",
+    "category": "opportunity",
+    "en": "Something saved for later is needed now.",
+    "it": "Ciò che conservavi per dopo serve adesso."
+  },
+  {
+    "id": "opportunity-06",
+    "category": "opportunity",
+    "en": "A rejected path deserves one careful second look.",
+    "it": "Una strada scartata merita un secondo sguardo attento."
+  },
+  {
+    "id": "opportunity-07",
+    "category": "opportunity",
+    "en": "Your next gain will come from simplifying.",
+    "it": "Il tuo prossimo vantaggio verrà dalla semplicità."
+  },
+  {
+    "id": "opportunity-08",
+    "category": "opportunity",
+    "en": "A useful connection begins with an unimportant conversation.",
+    "it": "Un legame utile nascerà da una conversazione insignificante."
+  },
+  {
+    "id": "opportunity-09",
+    "category": "opportunity",
+    "en": "Look again at what appeared too small.",
+    "it": "Guarda di nuovo ciò che sembrava troppo piccolo."
+  },
+  {
+    "id": "opportunity-10",
+    "category": "opportunity",
+    "en": "An overlooked invitation carries unexpected value.",
+    "it": "Un invito trascurato nasconde un valore inatteso."
+  },
+  {
+    "id": "opportunity-11",
+    "category": "opportunity",
+    "en": "The useful opening will not announce itself.",
+    "it": "L'apertura utile non si annuncerà."
+  },
+  {
+    "id": "opportunity-12",
+    "category": "opportunity",
+    "en": "What seems accidental may deserve deliberate attention.",
+    "it": "Ciò che sembra casuale potrebbe meritare attenzione consapevole."
+  },
+  {
+    "id": "reflection-01",
+    "category": "reflection",
+    "en": "Rest is needed. Isolation is not.",
+    "it": "Hai bisogno di riposo, non di isolamento."
+  },
+  {
+    "id": "reflection-02",
+    "category": "reflection",
+    "en": "Your attention is being spent where it is not required.",
+    "it": "Stai spendendo attenzione dove non è richiesta."
+  },
+  {
+    "id": "reflection-03",
+    "category": "reflection",
+    "en": "The waiting time is not wasted. Use it well.",
+    "it": "Il tempo dell'attesa non è sprecato. Usalo bene."
+  },
+  {
+    "id": "reflection-04",
+    "category": "reflection",
+    "en": "Your best answer will be shorter than expected.",
+    "it": "La tua risposta migliore sarà più breve del previsto."
+  },
+  {
+    "id": "reflection-05",
+    "category": "reflection",
+    "en": "One quiet morning will solve a noisy problem.",
+    "it": "Una mattina quieta risolverà un problema rumoroso."
+  },
+  {
+    "id": "reflection-06",
+    "category": "reflection",
+    "en": "Your body has noticed what your mind postpones.",
+    "it": "Il corpo ha notato ciò che la mente rimanda."
+  },
+  {
+    "id": "reflection-07",
+    "category": "reflection",
+    "en": "The truth is less dramatic and more useful.",
+    "it": "La verità è meno drammatica e più utile."
+  },
+  {
+    "id": "reflection-08",
+    "category": "reflection",
+    "en": "A temporary condition is not your identity.",
+    "it": "Una condizione temporanea non definisce chi sei."
+  },
+  {
+    "id": "reflection-09",
+    "category": "reflection",
+    "en": "One night of genuine rest will clarify the answer.",
+    "it": "Una notte di vero riposo renderà chiara la risposta."
+  },
+  {
+    "id": "reflection-10",
+    "category": "reflection",
+    "en": "Your hesitation contains information. Listen before choosing.",
+    "it": "La tua esitazione contiene indizi. Ascoltali prima di scegliere."
+  },
+  {
+    "id": "reflection-11",
+    "category": "reflection",
+    "en": "Step back before adding another solution.",
+    "it": "Fai un passo indietro prima di aggiungere un'altra soluzione."
+  },
+  {
+    "id": "reflection-12",
+    "category": "reflection",
+    "en": "A slower answer will prove more accurate.",
+    "it": "Una risposta più lenta si rivelerà più accurata."
+  },
+  {
+    "id": "change-01",
+    "category": "change",
+    "en": "You have outgrown a habit that still owns your time.",
+    "it": "Hai superato un'abitudine che possiede ancora il tuo tempo."
+  },
+  {
+    "id": "change-02",
+    "category": "change",
+    "en": "A useful ending is approaching. Let it end.",
+    "it": "Si avvicina una conclusione utile. Lascia che avvenga."
+  },
+  {
+    "id": "change-03",
+    "category": "change",
+    "en": "Comfort is becoming more expensive than change.",
+    "it": "La comodità sta diventando più costosa del cambiamento."
+  },
+  {
+    "id": "change-04",
+    "category": "change",
+    "en": "Something finished still has one lesson remaining.",
+    "it": "Qualcosa di concluso conserva ancora una lezione."
+  },
+  {
+    "id": "change-05",
+    "category": "change",
+    "en": "A familiar problem requires an unfamiliar response.",
+    "it": "Un problema familiare richiede una risposta insolita."
+  },
+  {
+    "id": "change-06",
+    "category": "change",
+    "en": "Remove something before acquiring something else.",
+    "it": "Togli qualcosa prima di acquisire altro."
+  },
+  {
+    "id": "change-07",
+    "category": "change",
+    "en": "A private ambition has grown too large to hide.",
+    "it": "Un'ambizione privata è diventata troppo grande per restare nascosta."
+  },
+  {
+    "id": "change-08",
+    "category": "change",
+    "en": "Change one ordinary thing tomorrow.",
+    "it": "Domani cambia una cosa ordinaria."
+  },
+  {
+    "id": "change-09",
+    "category": "change",
+    "en": "You are nearer to a beginning than an ending.",
+    "it": "Sei più vicino a un inizio che a una fine."
+  },
+  {
+    "id": "change-10",
+    "category": "change",
+    "en": "The old arrangement no longer fits the new need.",
+    "it": "Il vecchio assetto non risponde più al nuovo bisogno."
+  },
+  {
+    "id": "change-11",
+    "category": "change",
+    "en": "Release what only survives through repetition.",
+    "it": "Lascia andare ciò che sopravvive soltanto per ripetizione."
+  },
+  {
+    "id": "change-12",
+    "category": "change",
+    "en": "A small departure will reveal the larger direction.",
+    "it": "Una piccola deviazione rivelerà la direzione più grande."
+  },
+  {
+    "id": "warning-01",
+    "category": "warning",
+    "en": "Your caution is beginning to resemble fear.",
+    "it": "La tua prudenza comincia a somigliare alla paura."
+  },
+  {
+    "id": "warning-02",
+    "category": "warning",
+    "en": "A delayed decision is quietly growing larger.",
+    "it": "Una decisione rimandata sta crescendo in silenzio."
+  },
+  {
+    "id": "warning-03",
+    "category": "warning",
+    "en": "Do not confuse familiarity with safety.",
+    "it": "Non confondere la familiarità con la sicurezza."
+  },
+  {
+    "id": "warning-04",
+    "category": "warning",
+    "en": "Something you envy carries an unseen cost.",
+    "it": "Ciò che invidi ha un costo nascosto."
+  },
+  {
+    "id": "warning-05",
+    "category": "warning",
+    "en": "A pleasant distraction is becoming an obligation.",
+    "it": "Una piacevole distrazione sta diventando un obbligo."
+  },
+  {
+    "id": "warning-06",
+    "category": "warning",
+    "en": "A minor repair will prevent a larger inconvenience.",
+    "it": "Una piccola riparazione eviterà un disagio maggiore."
+  },
+  {
+    "id": "warning-07",
+    "category": "warning",
+    "en": "You are carrying responsibility nobody gave you.",
+    "it": "Stai portando una responsabilità che nessuno ti ha dato."
+  },
+  {
+    "id": "warning-08",
+    "category": "warning",
+    "en": "Bad timing may be fortunate protection.",
+    "it": "Quello che sembra un cattivo momento potrebbe proteggerti."
+  },
+  {
+    "id": "warning-09",
+    "category": "warning",
+    "en": "One ignored detail will soon demand attention.",
+    "it": "Un dettaglio ignorato chiederà presto attenzione."
+  },
+  {
+    "id": "warning-10",
+    "category": "warning",
+    "en": "Your certainty is hiding an untested assumption.",
+    "it": "La tua certezza nasconde un'ipotesi mai verificata."
+  },
+  {
+    "id": "warning-11",
+    "category": "warning",
+    "en": "The easier route has a cost you have missed.",
+    "it": "La via più facile ha un costo che non hai visto."
+  },
+  {
+    "id": "warning-12",
+    "category": "warning",
+    "en": "A promise made casually is becoming serious.",
+    "it": "Una promessa fatta con leggerezza sta diventando seria."
+  },
+  {
+    "id": "courage-01",
+    "category": "courage",
+    "en": "You are waiting for permission that will never arrive.",
+    "it": "Aspetti un permesso che non arriverà mai."
+  },
+  {
+    "id": "courage-02",
+    "category": "courage",
+    "en": "A small act of courage will prevent regret.",
+    "it": "Un piccolo atto di coraggio eviterà un rimpianto."
+  },
+  {
+    "id": "courage-03",
+    "category": "courage",
+    "en": "Saying no will soon protect something important.",
+    "it": "Dire di no proteggerà presto qualcosa di importante."
+  },
+  {
+    "id": "courage-04",
+    "category": "courage",
+    "en": "Ask clearly. Hinting has cost enough time.",
+    "it": "Chiedi con chiarezza. Le allusioni sono già costate abbastanza tempo."
+  },
+  {
+    "id": "courage-05",
+    "category": "courage",
+    "en": "Stop trying to please an absent audience.",
+    "it": "Smetti di cercare di compiacere un pubblico assente."
+  },
+  {
+    "id": "courage-06",
+    "category": "courage",
+    "en": "Choose the relief, not the applause.",
+    "it": "Scegli il sollievo, non l'applauso."
+  },
+  {
+    "id": "courage-07",
+    "category": "courage",
+    "en": "A small boundary will protect a larger freedom.",
+    "it": "Un piccolo confine proteggerà una libertà più grande."
+  },
+  {
+    "id": "courage-08",
+    "category": "courage",
+    "en": "Your instinct was right. Your timing was not.",
+    "it": "Il tuo istinto aveva ragione. Il momento era sbagliato."
+  },
+  {
+    "id": "courage-09",
+    "category": "courage",
+    "en": "Speak before silence becomes your answer.",
+    "it": "Parla prima che il silenzio diventi la tua risposta."
+  },
+  {
+    "id": "courage-10",
+    "category": "courage",
+    "en": "The difficult truth will simplify the next step.",
+    "it": "La verità difficile renderà più semplice il prossimo passo."
+  },
+  {
+    "id": "courage-11",
+    "category": "courage",
+    "en": "You already know which choice requires courage.",
+    "it": "Sai già quale scelta richiede coraggio."
+  },
+  {
+    "id": "courage-12",
+    "category": "courage",
+    "en": "Confidence will follow action, not precede it.",
+    "it": "La fiducia seguirà l'azione, non la precederà."
+  },
+  {
+    "id": "routine-01",
+    "category": "routine",
+    "en": "You have mistaken stillness for patience.",
+    "it": "Hai scambiato l'immobilità per pazienza."
+  },
+  {
+    "id": "routine-02",
+    "category": "routine",
+    "en": "Comfort has begun making your choices for you.",
+    "it": "La comodità ha iniziato a scegliere al posto tuo."
+  },
+  {
+    "id": "routine-03",
+    "category": "routine",
+    "en": "The habit you defend deserves examination.",
+    "it": "L'abitudine che difendi merita di essere esaminata."
+  },
+  {
+    "id": "routine-04",
+    "category": "routine",
+    "en": "You are spending energy on an already-made decision.",
+    "it": "Stai spendendo energia su una decisione già presa."
+  },
+  {
+    "id": "routine-05",
+    "category": "routine",
+    "en": "Consistency will matter more than intensity.",
+    "it": "La costanza conterà più dell'intensità."
+  },
+  {
+    "id": "routine-06",
+    "category": "routine",
+    "en": "One room contains too much unfinished business.",
+    "it": "Una stanza contiene troppe cose lasciate a metà."
+  },
+  {
+    "id": "routine-07",
+    "category": "routine",
+    "en": "Your surroundings are asking for one deliberate change.",
+    "it": "Ciò che ti circonda chiede un cambiamento intenzionale."
+  },
+  {
+    "id": "routine-08",
+    "category": "routine",
+    "en": "Remove one unnecessary part from your plan.",
+    "it": "Togli una parte inutile dal tuo piano."
+  },
+  {
+    "id": "routine-09",
+    "category": "routine",
+    "en": "Repetition is hiding a choice you could change.",
+    "it": "La ripetizione nasconde una scelta che potresti cambiare."
+  },
+  {
+    "id": "routine-10",
+    "category": "routine",
+    "en": "Your routine needs interruption, not abandonment.",
+    "it": "La tua routine ha bisogno di un'interruzione, non di essere abbandonata."
+  },
+  {
+    "id": "routine-11",
+    "category": "routine",
+    "en": "The familiar method is no longer the efficient one.",
+    "it": "Il metodo familiare non è più il più efficiente."
+  },
+  {
+    "id": "routine-12",
+    "category": "routine",
+    "en": "What once helped you now merely occupies time.",
+    "it": "Ciò che un tempo ti aiutava ora occupa soltanto il tuo tempo."
+  }
+]

@@ -9,7 +9,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Stone Oracle" />
-  <meta name="description" content="Touch the ancient stone and receive a short fortune." />
+  <meta id="metaDescription" name="description" content="Touch the ancient stone and receive a short fortune." />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="preload" href="assets/oracle-sleeping.webp" as="image" type="image/webp" fetchpriority="high" />
   <link rel="prefetch" href="assets/oracle-awake.webp" as="image" type="image/webp" />
@@ -19,15 +19,15 @@
   <title>The Stone Oracle</title>
 </head>
 <body>
-  <main class="oracle" id="app" data-state="idle" data-category="reflection" data-motion="full" data-ready="loading" data-performance="full">
+  <main class="oracle" id="app" data-state="idle" data-category="reflection" data-motion="full" data-ready="loading" data-performance="full" data-language="en">
     <div class="loading-veil" id="loadingVeil" role="status" aria-live="polite">
       <span class="loading-sigil" aria-hidden="true"></span>
-      <span>Waking the stone</span>
+      <span id="loadingText">Waking the stone</span>
     </div>
 
     <div class="landscape-hint" aria-hidden="true">
       <span class="rotate-device" aria-hidden="true"></span>
-      <p>Turn your device upright</p>
+      <p id="landscapeText">Turn your device upright</p>
     </div>
 
     <div class="scene" aria-hidden="true">
@@ -75,8 +75,19 @@
       <div class="dust dust-three"></div>
     </div>
 
-    <nav class="utility" aria-label="Oracle controls">
+    <nav class="utility" id="utilityNav" aria-label="Oracle controls">
       <button class="utility-button" id="infoButton" type="button" aria-label="About this experience">i</button>
+
+      <div class="language-switch" id="languageSwitch" role="group" aria-label="Language">
+        <button class="language-option" type="button" data-language="en" aria-label="English" aria-pressed="true">
+          <span class="language-flag" aria-hidden="true">🇬🇧</span><span class="language-code">EN</span>
+        </button>
+        <span class="language-divider" aria-hidden="true"></span>
+        <button class="language-option" type="button" data-language="it" aria-label="Italiano" aria-pressed="false">
+          <span class="language-flag" aria-hidden="true">🇮🇹</span><span class="language-code">IT</span>
+        </button>
+      </div>
+
       <button class="utility-button" id="soundButton" type="button" aria-label="Turn sound off" aria-pressed="true">
         <span id="soundIcon" aria-hidden="true">♪</span>
       </button>
@@ -86,7 +97,7 @@
 
     <div class="invitation" id="invitation" aria-hidden="true">
       <span class="invitation-mark"></span>
-      <p>Touch the stone</p>
+      <p id="invitationText">Touch the stone</p>
     </div>
 
     <p class="omen-status" id="statusText" role="status" aria-live="assertive"></p>
@@ -104,7 +115,7 @@
           <span class="emblem-medallion">✦</span>
           <span class="emblem-flourish emblem-flourish-right"></span>
         </div>
-        <p class="paper-kicker">The stone has spoken</p>
+        <p class="paper-kicker" id="paperKicker">The stone has spoken</p>
         <blockquote id="fortuneText"></blockquote>
         <div class="paper-rule" aria-hidden="true"><span></span></div>
         <p class="paper-date" id="fortuneDate"></p>
@@ -113,29 +124,29 @@
         <div class="result-actions" id="resultActions" aria-hidden="true" aria-label="Fortune actions">
           <button class="result-action" id="saveButton" type="button">
             <span class="action-icon" aria-hidden="true">↓</span>
-            <span>Save image</span>
+            <span id="saveLabel">Save image</span>
           </button>
           <span class="action-divider" aria-hidden="true"></span>
           <button class="result-action" id="shareButton" type="button">
             <span class="action-icon" aria-hidden="true">↗</span>
-            <span>Share</span>
+            <span id="shareLabel">Share</span>
           </button>
         </div>
         <button class="again-button" id="againButton" type="button">
           <span aria-hidden="true">↺</span>
-          Touch the stone again
+          <span id="againLabel">Touch the stone again</span>
         </button>
       </article>
     </section>
 
     <dialog id="aboutDialog">
       <button class="dialog-close" id="closeDialogButton" type="button" aria-label="Close">×</button>
-      <p class="dialog-kicker">The Stone Oracle</p>
-      <h1>One touch. One pronouncement.</h1>
-      <p>This is a digital fortune-machine prototype. Its messages are offered for amusement and reflection, not as factual predictions or professional advice.</p>
+      <p class="dialog-kicker" id="dialogKicker">The Stone Oracle</p>
+      <h1 id="dialogTitle">One touch. One pronouncement.</h1>
+      <p id="dialogBody">This is a digital fortune-machine prototype. Its messages are offered for amusement and reflection, not as factual predictions or professional advice.</p>
       <div class="dialog-setting">
         <div>
-          <strong>Motion</strong>
+          <strong id="motionLabel">Motion</strong>
           <span id="motionStatus">Stone movement, smoke and ceremonial transitions are enabled.</span>
         </div>
         <button id="motionButton" type="button" aria-pressed="false">Full</button>
@@ -146,7 +157,7 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
   </main>
   <noscript>
-    <div class="noscript-message">The Stone Oracle requires JavaScript to awaken.</div>
+    <div class="noscript-message">The Stone Oracle requires JavaScript to awaken. / L'Oracolo di Pietra richiede JavaScript.</div>
   </noscript>
   <script src="app.js" defer></script>
 </body>
