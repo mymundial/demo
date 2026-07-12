@@ -1286,13 +1286,11 @@ async function createFortuneBlob() {
   drawExportCorner(ctx, x + 29, y + height - 29, 1, -1);
   drawExportCorner(ctx, x + width - 29, y + height - 29, -1, -1);
 
-  drawExportRosette(ctx, 540, y + 52, categoryStyle.hex);
-
   ctx.textAlign = "left";
   ctx.textBaseline = "alphabetic";
   ctx.fillStyle = "rgba(57, 33, 15, .92)";
   ctx.font = '600 23px "Times New Roman", Times, serif';
-  drawTrackedText(ctx, getCopy("exportHeading"), 540, y + 108, currentLanguage === "it" ? 3.6 : 4.4);
+  drawTrackedText(ctx, getCopy("exportHeading"), 540, y + 86, currentLanguage === "it" ? 3.6 : 4.4);
 
   ctx.textAlign = "center";
   ctx.fillStyle = "#25170d";

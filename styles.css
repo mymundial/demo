@@ -860,8 +860,8 @@ dialog p { line-height: 1.55; color: rgba(220,207,180,.82); }
 
 .result-action:hover,
 .result-action:focus-visible {
-  background: rgb(var(--category-rgb) / .10) !important;
-  border-color: rgb(var(--category-rgb) / .52) !important;
+  background: rgba(255,248,225,.22) !important;
+  border-color: rgba(75,48,20,.34) !important;
   outline: none;
 }
 
@@ -872,9 +872,9 @@ dialog p { line-height: 1.55; color: rgba(220,207,180,.82); }
   height: 22px;
   display: inline-grid;
   place-items: center;
-  border: 1px solid rgb(var(--category-rgb) / .48);
+  border: 1px solid rgba(54,35,16,.34);
   border-radius: 50%;
-  color: var(--category);
+  color: rgba(41,27,13,.92);
   font-size: 14px;
   line-height: 1;
 }
@@ -900,7 +900,7 @@ dialog p { line-height: 1.55; color: rgba(220,207,180,.82); }
 }
 
 .again-button span {
-  color: var(--category);
+  color: rgba(41,27,13,.92);
   font-size: 14px;
 }
 
@@ -2117,16 +2117,31 @@ body {
 }
 
 
-/* V2.3 pass: keep utility action text neutral and independent from category colours */
-.result-action, .result-action span, .again-button {
+
+
+/* V2.3 pass 2: keep Save/Share and Again neutral, never category-coloured */
+.result-action,
+.result-action *,
+.again-button,
+.again-button * {
   color: rgba(41,27,13,.92) !important;
 }
+.result-action .action-icon {
+  border-color: rgba(54,35,16,.34) !important;
+}
+.result-action:hover,
+.result-action:focus-visible {
+  background: rgba(255,248,225,.22) !important;
+  border-color: rgba(75,48,20,.34) !important;
+}
 .result-action:hover .action-icon,
-.result-action:focus-visible .action-icon,
-.result-action:hover span,
-.result-action:focus-visible span,
-.again-button:hover span,
-.again-button:focus-visible span {
+.result-action:focus-visible .action-icon {
   color: rgba(41,27,13,.92) !important;
   border-color: rgba(54,35,16,.34) !important;
+}
+.again-button:hover,
+.again-button:focus-visible,
+.again-button:hover *,
+.again-button:focus-visible * {
+  color: rgba(41,27,13,.92) !important;
 }
