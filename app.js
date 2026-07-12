@@ -1336,8 +1336,8 @@ async function createFortuneBlob() {
   drawTrackedText(ctx, formatDate(), 540, y + height - 62, 2.6);
 
   ctx.fillStyle = "rgba(72, 43, 20, .68)";
-  ctx.font = 'italic 15px "Palatino Linotype", Palatino, Georgia, serif';
-  drawTrackedText(ctx, `OGNI PENSIERO VOLA  ·  ${getCopy("exportName")}`, 540, y + height - 31, currentLanguage === "it" ? 1.45 : 1.8);
+  ctx.font = '15px "Times New Roman", Times, serif';
+  drawTrackedText(ctx, getCopy("exportName"), 540, y + height - 31, currentLanguage === "it" ? 2.0 : 2.2);
 
   return new Promise(resolve => canvas.toBlob(resolve, "image/png"));
 }

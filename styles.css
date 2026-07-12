@@ -2115,3 +2115,18 @@ body {
   .language-switch { min-height: 32px; }
   .language-option { min-width: 43px; min-height: 24px; padding-block: 2px; }
 }
+
+
+/* V2.3 pass: keep utility action text neutral and independent from category colours */
+.result-action, .result-action span, .again-button {
+  color: rgba(41,27,13,.92) !important;
+}
+.result-action:hover .action-icon,
+.result-action:focus-visible .action-icon,
+.result-action:hover span,
+.result-action:focus-visible span,
+.again-button:hover span,
+.again-button:focus-visible span {
+  color: rgba(41,27,13,.92) !important;
+  border-color: rgba(54,35,16,.34) !important;
+}
